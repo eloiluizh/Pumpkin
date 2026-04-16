@@ -1,0 +1,28 @@
+name: build-pumpkin-win7
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Clonar repo
+        uses: actions/checkout@v4
+
+      - name: Instalar Rust (Versao GNU para Windows 7)
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-gnu
+
+      - name: Compilar Pumpkin (Otimizado pro Core 2 Duo)
+        env:
+          RUSTFLAGS: "-C target-cpu=core2"
+        run: cargo build --release --target x86_64-pc-windows-gnu
+
+      - name: Salvar executavel (.exe)
+        uses: actions/upload-artifact@v4
+        with:
+          name: pumpkin-win7-build
+          path: target/x86_64-pc-windows-gnu/release/pumpkin.exe
