@@ -2,7 +2,6 @@
 
 # Pumpkin
 
-![CI](https://github.com/Pumpkin-MC/Pumpkin/actions/workflows/rust.yml/badge.svg)
 [![Discord](https://img.shields.io/discord/1268592337445978193.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/pumpkinmc)
 [![License: GPL](https://img.shields.io/badge/License-GPLv3-yellow.svg)](https://opensource.org/licenses/gpl-3-0)
 [![build-pumpkin-win7](https://github.com/eloiluizh/Pumpkin/actions/workflows/build.yml/badge.svg)](https://github.com/eloiluizh/Pumpkin/actions/workflows/build.yml)
